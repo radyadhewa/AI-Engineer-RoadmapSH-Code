@@ -1,6 +1,7 @@
 """
 Via API call to OpenRouter to interact with LLMs.
 """
+
 # main library
 import json
 import os
@@ -17,7 +18,7 @@ import time
 load_dotenv()
 
 OPENROUTER_URL = os.getenv("OPENROUTER_URL")
-OPENROUTER_KEY = os.getenv("OPENROUTER_KEY")
+OPENROUTER_KEY = os.getenv("OPENROUTER_API_KEY")
 
 # validation
 if not OPENROUTER_URL or not OPENROUTER_KEY:
@@ -37,14 +38,12 @@ payload = {
     "messages": [{"role": "user", "content": "What is the best food in Indonesia"}],
 }
 
-
 # Function to display a loading spinner while waiting for LLM response
 def show_loading_spinner():
     for char in itertools.cycle("|/-\\"):
         sys.stdout.write(f"\rLoading for answer {char}")
         sys.stdout.flush()
         time.sleep(0.1)
-
 
 spinner_thread = threading.Thread(target=show_loading_spinner, daemon=True)
 spinner_thread.start()
