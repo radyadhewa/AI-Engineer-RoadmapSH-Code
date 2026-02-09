@@ -1,0 +1,13 @@
+[project]
+name = "ai-engineer-roadmapsh-code"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "faiss-cpu>=1.13.2",
+    "huggingface-hub>=1.4.1",
+    "openrouter>=0.6.0",
+    "python-dotenv>=1.2.1",
+    "requests>=2.32.5",
+    "sentence-transformers>=5.2.2",
+    "spacy>=3.8.11",
+]
