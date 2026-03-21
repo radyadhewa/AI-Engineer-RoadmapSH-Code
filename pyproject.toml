@@ -6,6 +6,7 @@ dependencies = [
     "faiss-cpu>=1.13.2",
     "huggingface-hub>=1.4.1",
     "langchain>=1.2.13",
+    "langchain-text-splitters>=1.1.1",
     "nltk>=3.9.3",
     "openrouter>=0.6.0",
     "python-dotenv>=1.2.1",
